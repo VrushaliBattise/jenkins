@@ -24,7 +24,7 @@ label 'Dev'
             steps {
                 sh 'git --version'
                 sh 'pwd'
-        echo "The current build number is ${env.BUILD_NUMBER}"
+        echo "The current build ID is ${env.BULD_ID}"
                 sh 'cd .'
                 echo 'Build Successfully'
             }
