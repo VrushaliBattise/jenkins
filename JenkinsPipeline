@@ -24,6 +24,8 @@ label 'Dev'
             steps {
                 sh 'git --version'
                 sh 'pwd'
+        echo "Biography: ${parama's BIO}
+        echo "Another method is to use \${BUILD_NUMBER} which is ${BUILD_NUMBER}"
                 sh 'cd .'
                 echo 'Build Successfully'
             }
