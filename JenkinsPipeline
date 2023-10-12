@@ -1,15 +1,35 @@
 pipeline {
-    agent any 
+    agent {node {label 'Dev'} }
+    
+    parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
     stages {
-        stage('Hello') { 
+        stage('Hello') {
             steps {
-                // 
+                echo 'Hello World'
             }
         }
-        stage('Bye') { 
+        stage('Build') {
             steps {
-              echo 'Good Bye'
-                 }
-                     }
-         }
+                sh 'java -version'
+                echo 'Build Successfully'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'git --version'
+                sh 'cd .'
+                echo 'Build Successfully'
+            }
+        }
+        stage('Test') {
+            steps {
+                dir('/home/ec2-user/workspace/Dev-pipeline/Abstract/') {
+                    sh 'ls'  
+                }
+                echo 'Test Successfully'
+            }
+        }
+    }
 }
