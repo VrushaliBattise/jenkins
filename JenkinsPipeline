@@ -25,6 +25,7 @@ label 'Dev'
                 sh 'git --version'
                 sh 'pwd'
         echo "The current build ID is ${env.BULD_ID}"
+        echo "Your jenkins home is ${JENKINS_HOME}
                 sh 'cd .'
                 echo 'Build Successfully'
             }
