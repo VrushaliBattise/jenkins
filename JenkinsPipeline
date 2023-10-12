@@ -23,6 +23,7 @@ label 'Dev'
         stage('Deploy') {
             steps {
                 sh 'git --version'
+                sh 'pwd'
                 sh 'cd .'
                 echo 'Build Successfully'
             }
