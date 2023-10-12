@@ -1,7 +1,8 @@
 pipeline {
-    agent {node {
+    agent {
+node {
 label 'Dev'
-customworkspace '/home/ec2-user/'
+customworkspace '/home/ec2-user/workspace/Dev-pipeline/Abstract/'
 }
 }
     
