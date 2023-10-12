@@ -2,7 +2,6 @@ pipeline {
     agent {
 node {
 label 'Dev'
-customworkspace '/home/ec2-user/workspace/Dev-pipeline/Abstract/'
 }
 }
     
