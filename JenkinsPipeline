@@ -32,7 +32,7 @@ label 'Dev'
         }
         stage('Test') {
             steps {
-                dir('/home/ec2-user/workspace/Dev-pipeline/Abstract/') {
+                dir('/home/ec2-user/workspace/Dev-pipeline/') {
                     sh 'ls'  
                 }
                 echo 'Test Successfully'
